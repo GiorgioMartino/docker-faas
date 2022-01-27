@@ -1,4 +1,6 @@
-# Install OpenFaaS, Multipass and crate new app
+#FaaS
+
+### Install OpenFaaS, Multipass and crate new app
 
 Install OpenFaaS CLI
 
@@ -28,7 +30,7 @@ Create new function using `faas-cli`
 $ faas-cli new --lang python3 app
 ```
 
-## Build, Push and Deploy
+### Build, Push and Deploy
 
 Build docker image for FaaS
 ```shell
@@ -45,7 +47,40 @@ Deploy Faas
 $ faas-cli deploy -f ./app.yml
 ```
 
-## Single command to Build, Push and Deploy
+### Single command to Build, Push and Deploy
 ```shell
 $ faas-cli up -f ./app.yml
+```
+
+
+# Microservice
+
+### Run local
+
+```shell
+$ source venv/bin/activate
+```
+
+Installed fastapi and uvicorn.
+
+Run with following command
+```shell
+$ uvicorn app.main:app --reload --port 8080
+```
+
+### Build & Push docker image to Docker Hub
+
+Build
+```shell
+$ docker build -t devgmartino/docker-app:latest .
+```
+
+Push
+```shell
+$ docker build -t devgmartino/docker-app:latest .
+```
+
+### Run docker image
+```shell
+$ docker run -p 8080:80 devgmartino/docker-app
 ```
