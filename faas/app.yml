@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://10.152.194.251:8080
+functions:
+  app:
+    lang: python3
+    handler: ./app
+    image: devgmartino/faas-app:latest

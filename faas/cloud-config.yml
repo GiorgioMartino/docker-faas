@@ -1,0 +1,20 @@
+#cloud-config
+ssh_authorized_keys:
+## Note: Replace with your own public key
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDLSbBHmJw/dokwQbAbJ2iS8+QvIPIbOWqgcPFi33C2unIvSsYsVMT8JRjNW1v/Vw9oJnNeYtlE5ZJACjL1OkDNXiq8/NK2dAdUACi/YeB40f24bHnJ49eHXS50GqLWA6rm8hUOU5AC6hL1iLT04ZdmrHafukjuiACO8PO3clVGZKSMrVSrXeR7zE3mstJrzqH7FQ+vn+pDsOVzzUi+A5ExvS2wmN12VppBN3aF1Q8jKyUWwd/kcsIOcllzvUYqhzSkEvaxwWM2jv2eU5MACg7f64gGb2rU5EKoI+ICWrOwgAU1CSAfWvD5m998xPoJK96Fw06Q1T6auFr76NxpYbgZrjY4koOWnGPCEvh4rnG92aU7e/X2NlojV/piWCgisovYZB+XEc2FMnsVV+QZk3M2h3q0+ZxlZf/4HNiDggJK1ygGEcZN+ONZfrxUSC2GCUxwfwuTH66ddcJ+bq6tKA17DHP633lH7YZyiubajSUOeh3IGcLBb8wMKkaPsHIFNMzbrg5w+WSJP+xCp1o5ZlTcKe/9dYlg8CO0xQBac2eXWBU1bcIlw06QzerpWosjDzEvQGqK+wecAfVFaAoM9m5kkRUEIVSntW3SYm599eIc4UDB88qSTgeBVYzR9IuGp6zrMQHLSllLiSghCcyPyCbs4p82UvH9OuOK/83bUly6qw== giorgio.martino.28@gmail.com
+
+package_update: true
+
+packages:
+ - runc
+ - git
+
+runcmd:
+- curl -sfL https://raw.githubusercontent.com/openfaas/faasd/master/hack/install.sh | sh -s -
+- systemctl status -l containerd --no-pager
+- journalctl -u faasd-provider --no-pager
+- systemctl status -l faasd-provider --no-pager
+- systemctl status -l faasd --no-pager
+- curl -sSLf https://cli.openfaas.com | sh
+- sleep 60 && journalctl -u faasd --no-pager
+- cat /var/lib/faasd/secrets/basic-auth-password | /usr/local/bin/faas-cli login --password-stdin

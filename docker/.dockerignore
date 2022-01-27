@@ -1,0 +1,6 @@
+Dockerfile
+venv
+*.md
+.git
+.gitignore
+.md-images
