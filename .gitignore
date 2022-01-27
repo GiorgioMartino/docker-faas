@@ -1,3 +1,6 @@
 faas/build
+faas/template
+docker/app/__pycache__
+faas/app/__pycache__
 venv
 .idea

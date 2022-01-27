@@ -77,7 +77,10 @@ $ faas-cli up -f ./app.yml
 $ source venv/bin/activate
 ```
 
-Installed fastapi and uvicorn.
+Install FastAPI, Uvicorn and other dependencies
+```shell
+$ pip install -r requirements.txt
+```
 
 Run with following command
 ```shell

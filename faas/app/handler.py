@@ -1,7 +1,10 @@
-def handle(req):
-    """handle a request to the function
-    Args:
-        req (str): request body
-    """
+import json
+from difflib import SequenceMatcher
 
-    return req
+
+def handle(req):
+    json_request = json.loads(req)
+    s1 = json_request["s1"]
+    s2 = json_request["s2"]
+    res = SequenceMatcher(None, s1, s2).ratio()
+    return json.dumps({"distance": res})
