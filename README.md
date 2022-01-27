@@ -1,4 +1,17 @@
-#FaaS
+# docker-faas Repository
+
+Repository comparing FastAPI microservice deployed as docker image and FaaS 
+built with multipass and deployed on faasd.
+
+### Modules:
+- [FaaS](#faas-module)
+- [Microservice](#microservice-module)
+
+<br>
+
+---
+
+# FaaS Module
 
 ### Install OpenFaaS, Multipass and crate new app
 
@@ -52,8 +65,11 @@ $ faas-cli deploy -f ./app.yml
 $ faas-cli up -f ./app.yml
 ```
 
+<br>
 
-# Microservice
+---
+
+# Microservice Module
 
 ### Run local
 
