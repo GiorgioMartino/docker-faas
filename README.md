@@ -65,6 +65,11 @@ $ faas-cli deploy -f ./app.yml
 $ faas-cli up -f ./app.yml
 ```
 
+## Usage
+Boot into the VM, modify `/var/lib/faasd/docker_compose.yml` to expose Prometheus on all IPs.
+
+Then you can access Prometheus at `$IP:9090`
+
 <br>
 
 ---
@@ -96,10 +101,10 @@ $ docker build -t devgmartino/docker-app:latest .
 
 Push
 ```shell
-$ docker build -t devgmartino/docker-app:latest .
+$ docker push devgmartino/docker-app:latest
 ```
 
 ### Run docker image
 ```shell
-$ docker run -p 8080:80 devgmartino/docker-app
+$ docker run -p 8081:80 devgmartino/docker-app
 ```
