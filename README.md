@@ -65,7 +65,7 @@ $ faas-cli deploy -f ./app.yml
 $ faas-cli up -f ./app.yml
 ```
 
-## Usage
+## Metrics
 Boot into the VM, modify `/var/lib/faasd/docker_compose.yml` to expose Prometheus on all IPs.
 
 Then you can access Prometheus at `$IP:9090`
@@ -89,7 +89,7 @@ $ pip install -r requirements.txt
 
 Run with following command
 ```shell
-$ uvicorn app.main:app --reload --port 8080
+$ uvicorn app.main:app --reload --port 8081
 ```
 
 ### Build & Push docker image to Docker Hub
