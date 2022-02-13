@@ -7,3 +7,7 @@ functions:
     lang: python3
     handler: ./app
     image: devgmartino/faas-app:latest
+  blockchain:
+    lang: python3
+    handler: ./blockchain
+    image: devgmartino/faas-blockchain:latest

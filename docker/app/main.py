@@ -1,32 +1,31 @@
-from typing import Optional
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 from fastapi import FastAPI
 from pydantic import BaseModel
 from difflib import SequenceMatcher
+from . import blockchain
 
 app = FastAPI()
 
 
-class Strings(BaseModel):
+class DistanceData(BaseModel):
     s1: str
     s2: str
 
 
+class ChainData(BaseModel):
+    blocks: int
+    content_mb: int
+
+
 @app.get("/distance")
-def compute_dist(strings: Strings):
-    res = SequenceMatcher(None, strings.s1, strings.s2).ratio()
+def compute_dist(dist_data: DistanceData):
+    res = SequenceMatcher(None, dist_data.s1,
+                          dist_data.s2).ratio()
     return {"distance": res}
 
 
-# @app.get("/")
-# def read_root():
-#     return {"Hello": "World"}
-#
-#
-# @app.get("/items/{item_id}")
-# def get_item(item_id: int, q: Optional[str] = None):
-#     return {"Item ID": item_id, "Query": q}
-#
-#
-# @app.put("/items/{item_id}")
-# def update_item(item_id: int, item: Item):
-#     return {"Item name": item.name, "Item ID": item_id}
+@app.post("/blockchain")
+def get_blockchain(chain_data: ChainData):
+    return blockchain.create_blockchain(chain_data.blocks,
+                                        chain_data.content_mb)
