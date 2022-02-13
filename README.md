@@ -70,6 +70,16 @@ Boot into the VM, modify `/var/lib/faasd/docker_compose.yml` to expose Prometheu
 
 Then you can access Prometheus at `$IP:9090`
 
+### Grafana
+
+After installing Grafana, you can start the server with
+
+```shell
+$ sudo systemctl start grafana-server
+```
+
+Now you can access `http://localhost:3000` logging as `admin`.
+
 <br>
 
 ---

@@ -6,11 +6,11 @@ Time has been measured on the Client*
 *These values have been taken right before/after running the Script*
 
 ```shell
-$ cat /sys/fs/cgroup/cpuacct/docker/$CONTAINER_ID/cpuacct.stat
+$ cat /sys/fs/cgroup/cpuacct/docker/<CONTAINER_ID>/cpuacct.stat
 ```
 
 ```shell
-$ cat /sys/fs/cgroup/memory/docker/$CONTAINER_ID/memory.usage_in_bytes
+$ cat /sys/fs/cgroup/memory/docker/<CONTAINER_ID>/memory.usage_in_bytes
 ```
 
 # FaaS
@@ -21,11 +21,11 @@ Time has been measured on the Client.*
 *These values have been taken right before/after running the Script*
 
 ```shell
-$ cat /sys/fs/cgroup/cpu,cpuacct/openfaas-fn/app/cpuacct.stat
+$ cat /sys/fs/cgroup/cpu,cpuacct/openfaas-fn/<FUNCTION_NAME>/cpuacct.stat
 ```
 
 ```shell
-$ cat /sys/fs/cgroup/memory/openfaas-fn/app/memory.usage_in_bytes
+$ cat /sys/fs/cgroup/memory/openfaas-fn/<FUNCTION_NAME>/memory.usage_in_bytes
 ```
 
 # String Distance
