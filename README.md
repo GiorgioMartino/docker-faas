@@ -118,3 +118,21 @@ $ docker push devgmartino/docker-app:latest
 ```shell
 $ docker run -p 8081:80 devgmartino/docker-app
 ```
+
+## Metrics
+
+In order to elaborate a docker container's metrics, `Prometheus` and `cAdvisor` are needed.
+
+First we need to create a `docker-compose.yml` that will deploy the three services:
+
+ - Prometheus
+ - cAdvisor
+ - docker-app
+
+Then, in a file called `prometheus.yml` we specify some settings for the instance to be built and
+to work correctly.
+
+Finally, run the following command to run all the containers
+```shell
+$ docker-compose up
+```
