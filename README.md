@@ -65,10 +65,23 @@ $ faas-cli deploy -f ./app.yml
 $ faas-cli up -f ./app.yml
 ```
 
-## Metrics
-Boot into the VM, modify `/var/lib/faasd/docker_compose.yml` to expose Prometheus on all IPs.
+#### Or using Docker's Parallel build
+```shell
+$ faas-cli up -f ./app.yml --parallel 2
+```
 
-Then you can access Prometheus at `$IP:9090`
+## Metrics
+Boot into the VM, modify `/var/lib/faasd/docker_compose.yml` to expose Prometheus on all IPs (`9090:9090`).
+
+Then, after the following commands
+```shell
+$ sudo systemctl daemon-reload
+
+$ sudo systemctl restart faasd
+```
+
+
+You can access Prometheus at `$IP:9090`
 
 ### Grafana
 

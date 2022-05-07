@@ -8,8 +8,8 @@ faas_url = "http://10.152.194.223:8080/function/blockchain"
 docker_req_time = []
 faas_req_time = []
 
-for i in range(1, 100):
-    payload = {"blocks": 10, "content_mb": 1}
+for i in range(1, 1000):
+    payload = {"blocks": 10, "content_mb": 3}
     print("Sending request ", i)
 
     docker_start = time.time()

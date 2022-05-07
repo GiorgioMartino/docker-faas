@@ -1,7 +1,7 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway: http://10.152.194.223:8080
+  gateway: http://10.52.144.99:8080
 functions:
   app:
     lang: python3
