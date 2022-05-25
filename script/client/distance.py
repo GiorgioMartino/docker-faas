@@ -7,11 +7,11 @@ import random
 import requests
 
 docker_url = "http://127.0.0.2:8081/distance"
-faas_url = "http://10.152.194.223:8080/function/app"
+faas_url = "http://10.52.144.99:8080/function/app"
 docker_req_time = []
 faas_req_time = []
 
-for i in range(1, 100):
+for i in range(1, 1000):
     len1 = random.randint(10000, 11000)
     len2 = random.randint(10000, 11000)
     s1 = ''.join(random.choices(string.ascii_lowercase, k=len1))

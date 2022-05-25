@@ -4,12 +4,12 @@ import time
 import requests
 
 docker_url = "http://127.0.0.2:8081/blockchain"
-faas_url = "http://10.152.194.223:8080/function/blockchain"
+faas_url = "http://10.52.144.99:8080/function/blockchain"
 docker_req_time = []
 faas_req_time = []
 
 for i in range(1, 1000):
-    payload = {"blocks": 10, "content_mb": 3}
+    payload = {"blocks": 10, "content_mb": 1}
     print("Sending request ", i)
 
     docker_start = time.time()
