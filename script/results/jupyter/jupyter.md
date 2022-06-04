@@ -14,7 +14,7 @@ sns.set_theme(style="darkgrid")
 
 
 ```python
-dataset = pd.read_csv("results/resp_time_distribution.csv")
+dataset = pd.read_csv("../results/resp_time_distribution.csv")
 ```
 
 
@@ -205,6 +205,20 @@ f.summary(method='sumsquare_error')
     
 
 
+
+```python
+f.get_best()
+```
+
+
+
+
+    {'lognorm': {'s': 0.38362554251848335,
+      'loc': 0.2156574071152112,
+      'scale': 0.003015810835749538}}
+
+
+
 ### Faasd
 
 
@@ -223,7 +237,7 @@ sns.histplot(data=dataset, x="faasd-blockchain", bins=100, kde=True)
 
 
     
-![png](output_10_1.png)
+![png](output_11_1.png)
     
 
 
@@ -312,8 +326,22 @@ f.summary()
 
 
     
-![png](output_12_1.png)
+![png](output_13_1.png)
     
+
+
+
+```python
+f.get_best()
+```
+
+
+
+
+    {'lognorm': {'s': 0.47657052246326603,
+      'loc': 0.5662122666859797,
+      'scale': 0.01657561789758634}}
+
 
 
 ## String Distance Response Time
@@ -336,7 +364,7 @@ sns.histplot(data=dataset, x="docker-distance", bins=100, kde=True)
 
 
     
-![png](output_15_1.png)
+![png](output_17_1.png)
     
 
 
@@ -426,8 +454,20 @@ f.summary()
 
 
     
-![png](output_17_1.png)
+![png](output_19_1.png)
     
+
+
+
+```python
+f.get_best()
+```
+
+
+
+
+    {'cauchy': {'loc': 0.006222430678432805, 'scale': 0.00024219772921037848}}
+
 
 
 ### Faasd
@@ -448,7 +488,7 @@ sns.histplot(data=dataset, x="faasd-distance", bins=100, kde=True)
 
 
     
-![png](output_19_1.png)
+![png](output_22_1.png)
     
 
 
@@ -537,6 +577,20 @@ f.summary()
 
 
     
-![png](output_21_1.png)
+![png](output_24_1.png)
     
+
+
+
+```python
+f.get_best()
+```
+
+
+
+
+    {'lognorm': {'s': 0.9326362516806754,
+      'loc': 0.12644619915783525,
+      'scale': 0.005418558274471882}}
+
 
