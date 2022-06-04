@@ -4,3 +4,5 @@ docker/app/__pycache__
 faas/app/__pycache__
 venv
 .idea
+script/tests/id_rsa
+script/tests/.ipynb_checkpoints
