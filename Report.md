@@ -46,7 +46,7 @@ of this first service was to test all the infrastructure.
 
 #### Blockchain Build
 
-The second one was instead implemented for benchmarking purposes. That's the main reason why Blockchain
+This second service was instead implemented for benchmarking purposes. That's the main reason why Blockchain
 has been chosen. The service accepts two Input parameters: `blocks` and `content_mb`.
 
 The first is the number of blocks that should constitute the chain, while the second in the size
@@ -59,15 +59,15 @@ Each block contains the SHA256 hash of the previous block, content, data and the
 The code written to implement the services is not complex, and FastAPI in well documented.
 
 Building a docker image requires little knowledge of the Docker ecosystem but is far from impossible,
-even more because it's a single image container.
+even more because this was a single image container.
 
 Setting up a faasd environment in not too hard either, but some problems were encountered. First of 
 all the documentation in very tiny, and having it up and running on a server is probably easier. 
-Due to some internal conflicts with docker, **multipass** is required (utility from Canonical).
+Due to some internal conflicts with docker, **multipass** has to be used (utility from Canonical).
 
 Multipass will create a VM containing a faasd instance starting from a YAML configuration file.
 Then the user is required to log into the VM, save the password in order to run CLI commands from
-the faas-cli from the host OS.
+the faas-cli utility inside the host OS.
 
 Finally, one or more functions can be created, and through another YAML configuration file we can
 specify each function's image name, and a base-url for all of them.
@@ -76,7 +76,7 @@ One of the biggest problems here was that, according to the documentation given 
 be possible to use images from local host, or even deploy a local registry and use it. Instead, 
 no way has been proved to work except for using the official Docker Hub (luckily it's free).
 
-Apart from that, the faas-cli allows the build, push and deploy stages of the functions in a handy 
+Apart from that, the faas-cli allows the build, push and deploy stages of the functions in a very handy 
 way.
 
 ### Metrics
@@ -84,7 +84,7 @@ way.
 The other big part of this project was to find as many metrics as possible. 
 Again, with Docker things went way smoother than with faasd. 
 
-Given that both services use docker images, some useful metrics were found in the CGroup files.
+Given that both services use docker images, some useful metrics were found in the control group files.
 For the Docker app they were in the host OS, under the container folder, while for faasd they have been
 found inside the VM. Those metrics are quite simple, but very effective, especially the user/system
 CPU time, and the Memory Usage in Bytes.
@@ -108,8 +108,11 @@ memory consumption.
 
 ## Experiments and Results
 
-All the following experiments have been run simultaneously on both services. The goal here was to evaluate three
-parameters for both Distance and Blockchain.
+For each of the following experiments, the APIs have been called simultaneously on both services. The goal here was to evaluate three
+parameters for both Distance and Blockchain. 
+
+All of these tests were performed through Python scripts that automated everything, from calling the APIs to 
+annotating the results on CSV files.
 
 Keeping in mind that the Blockchain service is much more realistic than the Distance one, the first tests were
 run on the response times.
