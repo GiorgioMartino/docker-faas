@@ -10,9 +10,9 @@ request.
 
 ### Modules:
 - [Description and Technologies](#Description-and-Technologies)
-- [Issues and Solutions](#Issues and Solutions)
-- [Experiments and Results](#Experiments and Results)
-- [Limitations and Future Improvements](#Limitations and Future Improvements)
+- [Issues and Solutions](#Issues-and-Solutions)
+- [Experiments and Results](#Experiments-and-Results)
+- [Limitations and Future Improvements](#Limitations-and-Future-Improvements)
 
 
 ## Description and Technologies
