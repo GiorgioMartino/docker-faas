@@ -9,7 +9,7 @@ Function as a Service, where each snippet of serverless function is deployed and
 request.
 
 ### Modules:
-- [Description and Technologies](#Description and Technologies)
+- [Description and Technologies](#Description-and-Technologies)
 - [Issues and Solutions](#Issues and Solutions)
 - [Experiments and Results](#Experiments and Results)
 - [Limitations and Future Improvements](#Limitations and Future Improvements)
