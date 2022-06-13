@@ -52,38 +52,38 @@ dataset.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.006729</td>
-      <td>0.131890</td>
-      <td>0.221331</td>
-      <td>0.575631</td>
+      <td>0.006910</td>
+      <td>0.321220</td>
+      <td>0.864425</td>
+      <td>2.009566</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.006311</td>
-      <td>0.132227</td>
-      <td>0.220521</td>
-      <td>0.599300</td>
+      <td>0.013986</td>
+      <td>0.183193</td>
+      <td>0.869114</td>
+      <td>1.990304</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.006329</td>
-      <td>0.129817</td>
-      <td>0.217973</td>
-      <td>0.582702</td>
+      <td>0.006473</td>
+      <td>0.192597</td>
+      <td>0.876750</td>
+      <td>1.980668</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.014750</td>
-      <td>0.129965</td>
-      <td>0.218725</td>
-      <td>0.585193</td>
+      <td>0.006076</td>
+      <td>0.216715</td>
+      <td>0.890567</td>
+      <td>1.980647</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.006341</td>
-      <td>0.132226</td>
-      <td>0.219362</td>
-      <td>0.593481</td>
+      <td>0.022268</td>
+      <td>0.242508</td>
+      <td>0.877038</td>
+      <td>1.961713</td>
     </tr>
   </tbody>
 </table>
@@ -160,37 +160,37 @@ f.summary(method='sumsquare_error')
   <tbody>
     <tr>
       <th>lognorm</th>
-      <td>5.159217e+05</td>
-      <td>-278.857643</td>
-      <td>868.669530</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>rayleigh</th>
-      <td>5.309145e+05</td>
-      <td>165.627176</td>
-      <td>866.928958</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>norm</th>
-      <td>6.168766e+05</td>
-      <td>486.751439</td>
-      <td>881.935746</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>cauchy</th>
-      <td>7.760303e+05</td>
-      <td>-539.687110</td>
-      <td>904.888002</td>
+      <td>1086.391969</td>
+      <td>172.820557</td>
+      <td>103.585351</td>
       <td>inf</td>
     </tr>
     <tr>
       <th>expon</th>
-      <td>1.271699e+06</td>
-      <td>-599.313602</td>
-      <td>954.279796</td>
+      <td>1112.746468</td>
+      <td>345.950274</td>
+      <td>120.646766</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>exponpow</th>
+      <td>1264.339334</td>
+      <td>406.014239</td>
+      <td>255.272986</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>rayleigh</th>
+      <td>1708.417418</td>
+      <td>1575.805192</td>
+      <td>549.382966</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>norm</th>
+      <td>1797.386101</td>
+      <td>2158.546230</td>
+      <td>600.148954</td>
       <td>inf</td>
     </tr>
   </tbody>
@@ -213,9 +213,9 @@ f.get_best()
 
 
 
-    {'lognorm': {'s': 0.38362554251848335,
-      'loc': 0.2156574071152112,
-      'scale': 0.003015810835749538}}
+    {'lognorm': {'s': 1.1076244750592275,
+      'loc': 0.8178075536764503,
+      'scale': 0.027484631343196453}}
 
 
 
@@ -284,38 +284,38 @@ f.summary()
   </thead>
   <tbody>
     <tr>
-      <th>lognorm</th>
-      <td>13018.098962</td>
-      <td>75.501438</td>
-      <td>500.708082</td>
-      <td>inf</td>
-    </tr>
-    <tr>
       <th>rayleigh</th>
-      <td>13658.643283</td>
-      <td>680.860140</td>
-      <td>500.906103</td>
+      <td>155.765802</td>
+      <td>1304.015531</td>
+      <td>-1845.586159</td>
       <td>inf</td>
     </tr>
     <tr>
-      <th>cauchy</th>
-      <td>15367.560043</td>
-      <td>-105.706414</td>
-      <td>512.694729</td>
+      <th>lognorm</th>
+      <td>157.207713</td>
+      <td>555.103508</td>
+      <td>-1829.464069</td>
       <td>inf</td>
     </tr>
     <tr>
       <th>norm</th>
-      <td>16438.005276</td>
-      <td>909.006732</td>
-      <td>519.428455</td>
+      <td>162.733083</td>
+      <td>1848.821709</td>
+      <td>-1801.828440</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>cauchy</th>
+      <td>167.289326</td>
+      <td>391.918761</td>
+      <td>-1774.214963</td>
       <td>inf</td>
     </tr>
     <tr>
       <th>exponpow</th>
-      <td>20297.933337</td>
-      <td>-73.032873</td>
-      <td>545.125927</td>
+      <td>171.825520</td>
+      <td>1188.163258</td>
+      <td>-1740.552470</td>
       <td>inf</td>
     </tr>
   </tbody>
@@ -338,9 +338,7 @@ f.get_best()
 
 
 
-    {'lognorm': {'s': 0.47657052246326603,
-      'loc': 0.5662122666859797,
-      'scale': 0.01657561789758634}}
+    {'rayleigh': {'loc': 1.9104911172189012, 'scale': 0.1797653996701631}}
 
 
 
@@ -413,37 +411,37 @@ f.summary()
   <tbody>
     <tr>
       <th>cauchy</th>
-      <td>3.511135e+05</td>
-      <td>-157.117831</td>
-      <td>825.579800</td>
+      <td>97399.346127</td>
+      <td>-384.959034</td>
+      <td>4592.635008</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>exponpow</th>
+      <td>193325.783056</td>
+      <td>112.611698</td>
+      <td>5285.100027</td>
       <td>inf</td>
     </tr>
     <tr>
       <th>lognorm</th>
-      <td>1.795848e+06</td>
-      <td>-536.844052</td>
-      <td>993.397309</td>
+      <td>196230.177446</td>
+      <td>-383.453870</td>
+      <td>5300.011611</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>norm</th>
+      <td>196292.616932</td>
+      <td>-377.802417</td>
+      <td>5293.422000</td>
       <td>inf</td>
     </tr>
     <tr>
       <th>gamma</th>
-      <td>2.347756e+06</td>
-      <td>-522.073364</td>
-      <td>1020.195552</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>expon</th>
-      <td>2.428433e+06</td>
-      <td>-562.779833</td>
-      <td>1018.968988</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>chi2</th>
-      <td>2.570771e+06</td>
-      <td>-610.016643</td>
-      <td>1029.270115</td>
+      <td>200823.083374</td>
+      <td>-421.593328</td>
+      <td>5323.147604</td>
       <td>inf</td>
     </tr>
   </tbody>
@@ -466,7 +464,7 @@ f.get_best()
 
 
 
-    {'cauchy': {'loc': 0.006222430678432805, 'scale': 0.00024219772921037848}}
+    {'cauchy': {'loc': 0.022805109566822176, 'scale': 0.0018872360976320396}}
 
 
 
@@ -535,38 +533,38 @@ f.summary()
   </thead>
   <tbody>
     <tr>
+      <th>rayleigh</th>
+      <td>2276.893182</td>
+      <td>-237.897578</td>
+      <td>836.627385</td>
+      <td>inf</td>
+    </tr>
+    <tr>
       <th>lognorm</th>
-      <td>63454.105729</td>
-      <td>-424.346408</td>
-      <td>659.105710</td>
+      <td>2383.026406</td>
+      <td>-231.680393</td>
+      <td>889.094545</td>
       <td>inf</td>
     </tr>
     <tr>
       <th>gamma</th>
-      <td>74215.491087</td>
-      <td>-426.460883</td>
-      <td>674.771310</td>
+      <td>2417.679965</td>
+      <td>-218.099433</td>
+      <td>903.531654</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>norm</th>
+      <td>2431.521392</td>
+      <td>-212.291293</td>
+      <td>902.332659</td>
       <td>inf</td>
     </tr>
     <tr>
       <th>expon</th>
-      <td>79024.819687</td>
-      <td>-438.934774</td>
-      <td>676.445047</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>cauchy</th>
-      <td>96212.125703</td>
-      <td>-322.571321</td>
-      <td>696.124389</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>exponpow</th>
-      <td>102681.517996</td>
-      <td>-481.385029</td>
-      <td>707.237234</td>
+      <td>2463.580515</td>
+      <td>-239.723618</td>
+      <td>915.431296</td>
       <td>inf</td>
     </tr>
   </tbody>
@@ -589,8 +587,127 @@ f.get_best()
 
 
 
-    {'lognorm': {'s': 0.9326362516806754,
-      'loc': 0.12644619915783525,
-      'scale': 0.005418558274471882}}
+    {'rayleigh': {'loc': 0.11816185533329944, 'scale': 0.0659609105394196}}
+
+
+
+
+```python
+fig = plt.figure(figsize=(15, 10))
+
+sns.histplot(data=dataset, x="faasd-distance", bins=100, kde=True)
+```
+
+
+
+
+    <AxesSubplot:xlabel='faasd-distance', ylabel='Count'>
+
+
+
+
+    
+![png](output_26_1.png)
+    
+
+
+
+```python
+faasd = dataset["faasd-distance"].values
+```
+
+
+```python
+fig = plt.figure(figsize=(15, 10))
+
+f = Fitter(faasd, distributions=get_common_distributions())
+f.fit()
+f.summary()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sumsquare_error</th>
+      <th>aic</th>
+      <th>bic</th>
+      <th>kl_div</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>rayleigh</th>
+      <td>2276.893182</td>
+      <td>-237.897578</td>
+      <td>836.627385</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>lognorm</th>
+      <td>2383.026406</td>
+      <td>-231.680393</td>
+      <td>889.094545</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>gamma</th>
+      <td>2417.679965</td>
+      <td>-218.099433</td>
+      <td>903.531654</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>norm</th>
+      <td>2431.521392</td>
+      <td>-212.291293</td>
+      <td>902.332659</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>expon</th>
+      <td>2463.580515</td>
+      <td>-239.723618</td>
+      <td>915.431296</td>
+      <td>inf</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+    
+![png](output_28_1.png)
+    
+
+
+
+```python
+f.get_best()
+```
+
+
+
+
+    {'rayleigh': {'loc': 0.11816185533329944, 'scale': 0.0659609105394196}}
 
 

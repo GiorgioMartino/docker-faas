@@ -16,7 +16,7 @@ faas_blockchain_req_time = []
 docker_distance_req_time = []
 faas_distance_req_time = []
 
-for i in range(0, 100):
+for i in range(0, 1000):
     # DISTANCE
     len1 = random.randint(10000, 11000)
     len2 = random.randint(10000, 11000)
@@ -39,7 +39,7 @@ for i in range(0, 100):
     faas_distance_req_time.append(faas_distance_end - faas_distance_start)
 
     # BLOCKCHAIN
-    blockchain_payload = {"blocks": 10, "content_mb": 1}
+    blockchain_payload = {"blocks": 20, "content_mb": 2}
 
     now = datetime.now().time()
     print(f"{now} - Sending request {i} for Docker Blockchain")
