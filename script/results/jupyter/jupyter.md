@@ -91,9 +91,9 @@ dataset.head()
 
 
 
-## Blockchain Response Time
+# Blockchain Response Time
 
-### Docker
+## Docker Blockchain
 
 
 ```python
@@ -219,7 +219,7 @@ f.get_best()
 
 
 
-### Faasd
+## Faasd Blockchain
 
 
 ```python
@@ -342,9 +342,9 @@ f.get_best()
 
 
 
-## String Distance Response Time
+# String Distance Response Time
 
-### Docker
+## Docker String Distance
 
 
 ```python
@@ -468,7 +468,7 @@ f.get_best()
 
 
 
-### Faasd
+## Faasd String Distance
 
 
 ```python
@@ -576,127 +576,6 @@ f.summary()
 
     
 ![png](output_24_1.png)
-    
-
-
-
-```python
-f.get_best()
-```
-
-
-
-
-    {'rayleigh': {'loc': 0.11816185533329944, 'scale': 0.0659609105394196}}
-
-
-
-
-```python
-fig = plt.figure(figsize=(15, 10))
-
-sns.histplot(data=dataset, x="faasd-distance", bins=100, kde=True)
-```
-
-
-
-
-    <AxesSubplot:xlabel='faasd-distance', ylabel='Count'>
-
-
-
-
-    
-![png](output_26_1.png)
-    
-
-
-
-```python
-faasd = dataset["faasd-distance"].values
-```
-
-
-```python
-fig = plt.figure(figsize=(15, 10))
-
-f = Fitter(faasd, distributions=get_common_distributions())
-f.fit()
-f.summary()
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sumsquare_error</th>
-      <th>aic</th>
-      <th>bic</th>
-      <th>kl_div</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>rayleigh</th>
-      <td>2276.893182</td>
-      <td>-237.897578</td>
-      <td>836.627385</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>lognorm</th>
-      <td>2383.026406</td>
-      <td>-231.680393</td>
-      <td>889.094545</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>gamma</th>
-      <td>2417.679965</td>
-      <td>-218.099433</td>
-      <td>903.531654</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>norm</th>
-      <td>2431.521392</td>
-      <td>-212.291293</td>
-      <td>902.332659</td>
-      <td>inf</td>
-    </tr>
-    <tr>
-      <th>expon</th>
-      <td>2463.580515</td>
-      <td>-239.723618</td>
-      <td>915.431296</td>
-      <td>inf</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-    
-![png](output_28_1.png)
     
 
 
